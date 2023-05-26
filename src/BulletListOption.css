@@ -1,0 +1,126 @@
+.bullet-list-option {
+  /* border: 1px solid; */
+  font-family: interface, sans-serif;
+  width: 80px;
+  height: 17px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.bullet-list-option:hover {
+  cursor: pointer;
+}
+
+.bullet-list-option-bullet-animated {
+  margin-right: 10px;
+  height: 10px;
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0.647);
+  border-radius: 50%;
+  animation: shrinkBullet .5s;
+  /* animation-delay: 1s; */
+}
+
+.bullet-list-option-bullet-selected-animated {
+  margin-right: 10px;
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+  animation: growBullet 1s;
+  /* animation-delay: 1s; */
+}
+
+.bullet-list-option-text-animated {
+  color: rgba(255, 255, 255, 0.647);
+  font-size: 15px;
+  animation: shrinkText .5s;
+  /* animation-delay: 1s; */
+}
+
+.bullet-list-option-text-selected-animated {
+  color: white;
+  /* font-size: 16px; */
+  animation: growText .5s;
+  /* animation-delay: 1s; */
+}
+
+/* NON-ANIMATED */
+.bullet-list-option-bullet {
+  margin-right: 10px;
+  height: 10px;
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0.647);
+  border-radius: 50%;
+}
+
+.bullet-list-option-bullet-selected {
+  margin-right: 10px;
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.bullet-list-option-text {
+  color: rgba(255, 255, 255, 0.647);
+  font-size: 15px;
+}
+
+.bullet-list-option-text-selected {
+  color: white;
+  font-size: 16px;
+}
+
+@keyframes growText {
+  from {
+    color: rgba(255, 255, 255, 0.647);
+    font-size: 15px;
+  }
+
+  to {
+    color: white;
+    font-size: 16px;
+  }
+}
+
+@keyframes shrinkText {
+  from {
+    color: white;
+    font-size: 16px;
+  }
+
+  to {
+    color: rgba(255, 255, 255, 0.647);
+    font-size: 15px;
+  }
+}
+
+@keyframes growBullet {
+  from {
+    background-color: rgba(255, 255, 255, 0.647);
+    height: 10px;
+    width: 10px;
+  }
+
+  to {
+    background-color: white;
+    height: 13px;
+    width: 13px;
+  }
+}
+
+@keyframes shrinkBullet {
+  from {
+    background-color: white;
+    height: 13px;
+    width: 13px;
+  }
+
+  to {
+    background-color: rgba(255, 255, 255, 0.647);
+    height: 10px;
+    width: 10px;
+  }
+}
